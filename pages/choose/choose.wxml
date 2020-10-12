@@ -1,0 +1,75 @@
+<!--pages/choose.wxml-->
+<van-cell title="选择城市" is-link value="{{city}}" size="large" link-type="navigateTo" bind:click="openMark" />
+
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" round>
+	<area bindclose="onClose" bindobtain="obtainCity"></area>
+</van-popup>
+
+<van-cell title="选择性别" size="large">
+	<van-radio-group class="cell-radio" name="sexRadio" value="{{ sexRadio }}" slot="right-icon" bind:change="onChangeSex">
+		<van-radio icon-size="18px" name="1">男</van-radio>
+		<van-radio icon-size="18px" name="0">女</van-radio>
+	</van-radio-group>
+</van-cell>
+
+<van-cell class="status" title="驾校报名状态" size="large">
+	<van-radio-group value="{{ statusRadio }}" name="statusRadio" slot="right-icon" bind:change="onChangeStatus">
+		<van-radio use-icon-slot value="{{ statusRadio }}" name="chk">
+			<!-- <van-button color="{{statusRadio==='chk'?'#1989fa':''}}"   plain="{{statusRadio!=='chk'}}" size="mini">已报名</van-button> -->
+			<van-button type="info" plain="{{statusRadio!=='chk'}}" size="mini">已报名</van-button>
+		</van-radio>
+		<van-radio use-icon-slot value="{{ statusRadio }}" name="unchk">
+			<!-- <van-button color="{{statusRadio==='unchk'?'#1989fa':''}}"   plain="{{statusRadio!=='unchk'}}" size="mini">未报名</van-button> -->
+			<van-button type="info" plain="{{statusRadio!=='unchk'}}" size="mini">未报名</van-button>
+		</van-radio>
+	</van-radio-group>
+</van-cell>
+
+<view class="category-drive">
+	<view class="drive-title">
+		<van-cell size="large" use-label-slot>
+			<view class="drive-slot" slot="title">
+				<text class="van-cell-text">驾驶证</text>
+				<block wx:if="{{certificateType==='drive'}}">
+					<text class="drive-text">当前类型:{{carTypeText}}</text>
+				</block>
+			</view>
+		</van-cell>
+	</view>
+	<view class="drive-content">
+		<van-grid border="{{ false }}">
+			<van-grid-item class="{{isActive===index&&certificateType==='drive'?'isActive':''}}" bindtap="addClass" data-item="{{item}}" data-index="{{index}}" data-certificatetype="drive" use-slot wx:for="{{carType}}" wx:key="id">
+				<iconfont name="{{item.iconName}}" size="45" />
+				<view class="drive-car">{{item.name}}</view>
+				<view class="drive-car-text">{{item.model}}</view>
+			</van-grid-item>
+		</van-grid>
+	</view>
+</view>
+
+<view class="category-drive">
+	<view class="drive-title">
+		<van-cell size="large" use-label-slot>
+			<view class="drive-slot" slot="title">
+				<text class="van-cell-text">资格证</text>
+				<block wx:if="{{certificateType==='qualifications'}}">
+					<text class="drive-text" >当前类型:{{carTypeText}}</text>
+				</block>
+			</view>
+		</van-cell>
+	</view>
+	<view class="drive-content">
+		<van-grid border="{{ false }}">
+			<van-grid-item class="{{isActive===index&&certificateType==='qualifications'?'isActive':''}}" bindtap="addClass" data-item="{{item}}" data-index="{{index}}" data-certificatetype="qualifications" use-slot wx:for="{{qualificationsType}}" wx:key="id">
+				<iconfont class="qualifications-icon" name="{{item.iconName}}" size="45" />
+				<view class="drive-car drive-qualifications">{{item.name}}</view>
+			</van-grid-item>
+		</van-grid>
+	</view>
+</view>
+
+<view class="bottom-botton">
+	<van-button color="linear-gradient(to right, #7ed6df, #1989fa)" round block bind:click="jumpIndex">
+		确定
+	</van-button>
+</view>

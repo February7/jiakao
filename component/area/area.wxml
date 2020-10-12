@@ -1,0 +1,2 @@
+<!--component/area.wxml-->
+<van-area area-list="{{ areaList }}" columns-num="{{ 2 }}" value="410110" title="驾考宝典" confirm-button-text="选择" cancel-button-text="返回" bind:cancel="onClose" bind:confirm="onObtain" />

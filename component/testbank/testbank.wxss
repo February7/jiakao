@@ -1,0 +1,38 @@
+/* component/testbank/testbank.wxss */
+.mode-selection{
+  width: 100%;
+  height: 700rpx;
+  margin-top: 14rpx;
+  display: grid;
+  grid-template: 
+    "会员 顺序 错题" 1fr
+    "专项 顺序 随机" 1fr
+    "技巧 模拟 考前" 1fr
+    "评题 模拟 排行" 1fr
+    /1fr 1fr 1fr;
+}
+.vip,.cuoti,.zhuanxiang,.suiji,.jiqiao,.kaoqian,.yati,.paihang{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.shunxu,.moni{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vip{ grid-area: 会员; }
+.shunxu{ grid-area: 顺序;}
+.cuoti{ grid-area: 错题; }
+.zhuanxiang{ grid-area: 专项; }
+.suiji{ grid-area: 随机; }
+.jiqiao{ grid-area: 技巧; }
+.moni{ grid-area: 模拟; }
+.kaoqian{ grid-area: 考前; }
+.yati{ grid-area: 评题; }
+.paihang{ grid-area: 排行; }
+.mode-selection .mode-text{
+  font-size: 12px;
+  margin-top: -4px;
+}

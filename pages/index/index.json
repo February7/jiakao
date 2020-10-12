@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "testbank": "/component/testbank/testbank"
+  },
+  "navigationBarTitleText":"驾考宝典"
+}

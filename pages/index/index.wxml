@@ -1,0 +1,10 @@
+<view class="tab">
+	<van-tabs sticky animated swipeable color="black" line-width="20" >
+		<van-tab title="科一">
+			<testbank></testbank>
+		</van-tab>
+		<van-tab title="科四">
+			<testbank></testbank>
+		</van-tab>
+	</van-tabs>
+</view>

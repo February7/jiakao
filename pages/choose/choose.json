@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+  "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-popup": "@vant/weapp/popup/index",
+  "van-radio": "@vant/weapp/radio/index",
+  "van-radio-group": "@vant/weapp/radio-group/index",
+  "van-button": "@vant/weapp/button/index",
+  "van-grid": "@vant/weapp/grid/index",
+  "van-grid-item": "@vant/weapp/grid-item/index",
+  "area":"/component/area/area"
+  },
+  "navigationBarBackgroundColor":"#17c0eb",
+  "navigationBarTextStyle":"white",
+  "navigationBarTitleText":"选择你的驾考信息"
+}

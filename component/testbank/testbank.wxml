@@ -1,0 +1,13 @@
+<!--component/testbank/testbank.wxml-->
+<view class="mode-selection">
+	<view class="{{item.className}}" wx:for="{{smallModeSelection}}" wx:key="id">
+		<iconfont name="{{item.iconName}}" size="38" />
+		<view class="mode-text">{{item.textName}}</view>
+	</view>
+	<view class="shunxu">
+		<van-circle value="{{ value }}" stroke-width="5" layer-color="#dff9fb" color="{{ gradientColor }}" text="顺序练习" />
+	</view>
+	<view class="moni">
+		<van-circle value="{{ value }}" stroke-width="5" layer-color="#dff9fb" color="{{ gradientColor }}" text="模拟考试" />
+	</view>
+</view>
