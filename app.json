@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/choose/choose",
+    "pages/index/index",
+    "pages/signup/signup",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#a4b0be",
+    "selectedColor":"#1989fa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "考试",
+        "iconPath": "image/tabbar/icon_shijuan.png",
+        "selectedIconPath": "image/tabbar/icon_shijuan_selected.png"
+      },
+      {
+        "pagePath": "pages/signup/signup",
+        "text": "报名",
+        "iconPath": "image/tabbar/icon_banjidingdan.png",
+        "selectedIconPath": "image/tabbar/icon_banjidingdan_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/tabbar/icon_jiangshi.png",
+        "selectedIconPath": "image/tabbar/icon_jiangshi_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "iconfont": "/iconfont/iconfont"
+  }
+}
